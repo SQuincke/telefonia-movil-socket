@@ -1,5 +1,6 @@
 import socket
 
+
 HOST = "0.0.0.0"
 PORT = 8000
 
@@ -15,7 +16,7 @@ def main():
                 data = conn.recv(1024)
                 if not data:
                     break
-                message = f"Greetings from {HOST}:{PORT}\nYour message was {data.decode()}"
+                message = f"Greetings!!!\nYour message was {data.decode()}"
                 conn.sendall(message.encode())
 
 
